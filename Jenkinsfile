@@ -44,7 +44,7 @@ cp target/*.jar ../containers/petclinic"""
 oc login https://localhost:8443 --username admin --password admin --insecure-skip-tls-verify=true
 oc project ${projectName
 oc apply -f petclinic-imagestream.yaml
-# oc apply -f petclinic-build.yaml
+oc apply -f petclinic-build.yaml
 oc apply -f petclinic-service.yaml
 oc apply -f petclinic-route.yaml || echo 'Route already in place'"""
         }
